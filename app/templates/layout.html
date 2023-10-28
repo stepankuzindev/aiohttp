@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Force latest IE rendering engine or ChromeFrame if installed -->
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <meta charset="utf-8">
+  <title>{%- block title-%}{%- endblock -%}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="{%- block description-%}{%- endblock -%}" />
+  <meta name="copyright" content="{{copy()}}" />
+  <meta id="meta-aft" name="aft" content="{{antiforgery()}}" />
+  <meta id="meta-culture" name="culture" content="{{culture}}" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="/styles/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  {%- block css -%}{%- endblock -%}
+</head>
+<body>
+  <nav id="main-nav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div id="content">
+    {%- block body -%}{%- endblock -%}
+  </div>
+  {%- block js -%}{%- endblock -%}
+  {% include "partial/analytics.html" %}
+</body>
+</html>
